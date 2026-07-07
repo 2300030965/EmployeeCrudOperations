@@ -1,92 +1,338 @@
-# employeeCRUD
+# Employee CRUD Operations
 
-This is a practice CRUD application built using React.JS and SpringBoot.
+A Full Stack Employee Management System developed using **React.js**, **Spring Boot**, **Java Swing**, **JDBC**, and **MySQL**. The project includes both a modern web application and a desktop GUI application for managing employee records.
 
-## Getting started
+---
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+# 📌 Project Overview
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+This project demonstrates Employee CRUD (Create, Read, Update, Delete) operations using different Java technologies.
 
-## Add your files
+The project contains:
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+- 🌐 React.js Frontend
+- ☕ Spring Boot Backend (REST API)
+- 🖥 Java Swing Desktop GUI
+- 🗄 MySQL Database
+
+Users can:
+
+- Add Employee
+- Update Employee
+- Delete Employee
+- Search Employee
+- View All Employees
+
+---
+
+# 🛠 Technologies Used
+
+## Frontend (Web)
+
+- React.js
+- JavaScript (ES6)
+- HTML5
+- CSS3
+- Bootstrap
+- Axios
+- React Router
+
+## Backend
+
+- Java
+- Spring Boot
+- Spring MVC
+- Spring Data JPA
+- Hibernate
+- REST API
+- Maven
+
+## Desktop GUI
+
+- Java Swing
+- AWT
+- JTable
+- JFrame
+- JTextField
+- JButton
+- JOptionPane
+- JDBC
+
+## Database
+
+- MySQL
+
+## Version Control
+
+- Git
+- GitHub
+
+---
+
+# ✨ Features
+
+## React Application
+
+- Responsive User Interface
+- Employee CRUD Operations
+- REST API Integration
+- Employee List
+- Search Employees
+
+## Spring Boot Backend
+
+- REST APIs
+- CRUD Operations
+- MySQL Integration
+- Exception Handling
+
+## Java Swing GUI
+
+- Add Employee
+- Update Employee
+- Delete Employee
+- Search Employee
+- Display All Employees
+- JTable Integration
+- Duplicate Employee ID Validation
+- JDBC Connectivity
+
+---
+
+# 📂 Project Structure
+
+```text
+EmplyeeCRUDOperations
+│
+├── frontend
+│   ├── src
+│   ├── public
+│   ├── package.json
+│   └── ...
+│
+├── backend
+│   ├── src
+│   ├── pom.xml
+│   └── ...
+│
+├── desktop-gui
+│   ├── src
+│   │   └── com
+│   │       └── employees
+│   │            ├── Employee.java
+│   │            ├── EmployeeGUI.java
+│   │            ├── EmployeeManager.java
+│   │            ├── DatabaseHelper.java
+│   │            └── Main.java
+│   └── ...
+│
+└── README.md
+```
+
+---
+
+# 🗄 Database
+
+Database Name
+
+```sql
+employee_db
+```
+
+Table
+
+```sql
+CREATE TABLE employees (
+    id INT PRIMARY KEY,
+    name VARCHAR(100),
+    role VARCHAR(100),
+    salary DOUBLE
+);
+```
+
+---
+
+# 🌐 Spring Boot REST APIs
+
+| Method | Endpoint | Description |
+|---------|----------|-------------|
+| GET | /employees | Get All Employees |
+| GET | /employees/{id} | Get Employee By ID |
+| POST | /employees | Add Employee |
+| PUT | /employees/{id} | Update Employee |
+| DELETE | /employees/{id} | Delete Employee |
+
+---
+
+# 🖥 Java Swing GUI
+
+The desktop application provides:
+
+- Employee Registration
+- Update Employee Details
+- Delete Employee
+- Search Employee
+- Display Employee Records using JTable
+- Clear Form
+- MySQL Database Connectivity
+
+GUI Components:
+
+- JFrame
+- JTable
+- JTextField
+- JButton
+- JScrollPane
+- JPanel
+- JOptionPane
+
+---
+
+# 🚀 How to Run
+
+## Clone Repository
+
+```bash
+git clone https://github.com/2300030965/EmplyeeCRUDOperations.git
+```
+
+---
+
+## Run React Frontend
+
+```bash
+cd frontend
+npm install
+npm start
+```
+
+Runs on:
 
 ```
-cd existing_repo
-git remote add origin https://gitlab.com/prathabanKavin/employeecrud.git
-git branch -M main
-git push -uf origin main
+http://localhost:3000
 ```
 
-## Integrate with your tools
+---
 
-- [ ] [Set up project integrations](https://gitlab.com/prathabanKavin/employeecrud/-/settings/integrations)
+## Run Spring Boot Backend
 
-## Collaborate with your team
+```bash
+cd backend
+mvn spring-boot:run
+```
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+Runs on:
 
-## Test and Deploy
+```
+http://localhost:8080
+```
 
-Use the built-in continuous integration in GitLab.
+---
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+## Run Java Swing Application
 
-***
+Open the `desktop-gui` project in Eclipse, IntelliJ IDEA, or NetBeans.
 
-# Editing this README
+Configure the MySQL database connection in `DatabaseHelper.java`.
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!).  Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
+Run:
 
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+```text
+Main.java
+```
 
-## Name
-Choose a self-explaining name for your project.
+---
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+# 📊 Project Workflow
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+## Web Application
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+```text
+React Frontend
+      │
+      ▼
+Axios HTTP Requests
+      │
+      ▼
+Spring Boot REST API
+      │
+      ▼
+Service Layer
+      │
+      ▼
+JPA Repository
+      │
+      ▼
+MySQL Database
+```
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+## Desktop Application
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+```text
+Java Swing GUI
+      │
+      ▼
+EmployeeManager
+      │
+      ▼
+JDBC
+      │
+      ▼
+MySQL Database
+```
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+---
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+# 📚 Learning Outcomes
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+This project helped me understand:
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+- React.js Development
+- Spring Boot Development
+- Java Swing GUI Development
+- JDBC Connectivity
+- REST API Development
+- MySQL Database
+- Object-Oriented Programming
+- CRUD Operations
+- MVC Architecture
+- Git & GitHub
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+---
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+# 🔮 Future Enhancements
 
-## License
-For open source projects, say how it is licensed.
+- JWT Authentication
+- Role-Based Access Control
+- Employee Image Upload
+- Export to Excel
+- Export to PDF
+- Dashboard & Analytics
+- Pagination
+- Search Filters
+- Docker Deployment
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+---
+
+# 👨‍💻 Author
+
+**VASMHI KARTHIK**
+
+**Java Full Stack Developer**
+
+### Technologies
+
+- Java
+- Spring Boot
+- React.js
+- Java Swing
+- JDBC
+- MySQL
+- Git
+- GitHub
+
+---
+
+# 📄 License
+
+This project is developed for educational and learning purposes.
