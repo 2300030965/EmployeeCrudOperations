@@ -1,0 +1,103 @@
+/* ===============================
+   GOOGLE FONT
+================================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ===============================
+   RESET
+================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* ===============================
+   BODY
+================================= */
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f5f7fb;
+    color:#333;
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+/* ===============================
+   LINKS
+================================= */
+
+a{
+    text-decoration:none;
+}
+
+a:hover{
+    text-decoration:none;
+}
+
+/* ===============================
+   HEADINGS
+================================= */
+
+h1,h2,h3,h4,h5,h6{
+    font-weight:700;
+}
+
+/* ===============================
+   PARAGRAPH
+================================= */
+
+p{
+    margin-bottom:0;
+}
+
+/* ===============================
+   BUTTONS
+================================= */
+
+button{
+    cursor:pointer;
+    transition:0.3s;
+}
+
+/* ===============================
+   INPUTS
+================================= */
+
+input,
+textarea,
+select{
+    font-family:'Poppins',sans-serif;
+}
+
+/* ===============================
+   SCROLL BAR
+================================= */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#f1f1f1;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#0d6efd;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#084298;
+}
+
+/* ===============================
+   SELECTION
+================================= */
+
+::selection{
+    background:#0d6efd;
+    color:white;
+}
